@@ -10,6 +10,8 @@ redirect_from:
 toc: true
 ---
 
+[Get started!](../../getting-started/quick-start)
+
 ## Introduction
 
 Microshare makes it easy for you to work with shareable data. Once your data is uploaded on our platform, we provide all the tools you need to transform, visualize and share the data.
