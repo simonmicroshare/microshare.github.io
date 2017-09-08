@@ -13,6 +13,27 @@ It is a great tool to share and manipulate your data.
 
 In this _Getting Started_ section we will go through each of the different things you can create on that console. For more detailed information you can access the detailed documentation via the menu on the left.
 
+## Hackathon Recipe
+
+Follow those steps after your first login to build your first Application. 
+
+1. Create an App key for your new project  
+Used when creating new elements, to make sure they are yours.
+2. Create your first Robot, that will be ready to process your data  
+Really you just need to specify the recType properly.
+Use the App key to confirm the creation.
+3. Push an example record in your shares  
+Use the [auth](../../../assets/html/api-ms.html#folder-authentication) to get an APIKEY from your App key and POST [Share APIs](../../../assets/html/api-ms.html#folder-shares).
+4. Edit that Robot so test your data processing  
+Build your data transformation script, and see live if it works.
+You are saving the transformed data under another record type.
+5. but just before? Create a fact called by the App?  
+5. Create a Form, the front-end for your App, displaying your modified data  
+It gets the data from your record
+6. Create an App that uses the Form  
+7. Run it  
+8. To go further, extend your pipeline workflow with Facts and Robots  
+
 ## Uploading Data
 Our `/share` API allows you to upload your data to our data lake.
 Example of a POST /share call to upload one piece of data:
