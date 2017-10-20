@@ -36,20 +36,14 @@ You will need an access token to push data into the Microshare platform. Follow 
 Note: you will need an account to get an access token
 
 
-*  Navigate to the [Microshare platform](https://dapp.microshare.io) and sign in using your credentials
-*  Click the "Manage" button in the top toolbar
-
-[insert screen shot of this page]
-
-*  Click the "Keys" button in the left toolbar
-
-[insert screen shot of this page]
-
-* Click on the "Create New App" button at the top right of the screen
-* Type the app name and any appropriate notes relating to the app, then click "Create App"
-* Click on the newly created API Key to copy it 
-* Open Postman
-* Make a Post call to [insert where to make postcall][../file]
+1.  Navigate to the [Microshare platform](https://dapp.microshare.io) and sign in using your credentials
+2.  Click the "Manage" button in the top toolbar
+3.  Click the "Keys" button in the left toolbar
+4. Click on the "Create New App" button at the top right of the screen
+5. Type the app name and any appropriate notes relating to the app, then click "Create App"
+6. Click on the newly created API Key to copy it 
+7. Open Postman
+8. Make a Post call to [insert where to make postcall][../file]
     * See below for an example of the parameters for the Post Call:
 
 
@@ -124,19 +118,15 @@ A rule governs the data you have uploaded in a specific recType. You can adjust 
 2. Click the "Manage" button in the top toolbar
 3. Click the "Rules" button in the left toolbar
 4. Click the the "Create" button
-5. You will be directed to the screen depicted below
-
-[insert screenshot]
-
-* Input the Rule name in the top most text field
-* Type "My First Rule" the text field labeled "Description"
-* Input the same recType used in the previous section in the text field labeled "Record Type"  
-* In the section labeled ooperations check off the boxes for "Read" and "Write"
-* Scroll down to the section labeled "Requestor"
-* Click on the "user" dropdown within the "Requestor" section
-* Select the "Specific Value" option
-* A text box will appear with greyed out text reading "Please enter a value"
-* Enter the email of the user whom will be allowed to access the data
+5. Input the Rule name in the top most text field
+5. Type "My First Rule" in the text field labeled "Description"
+5. Input the same recType used in the previous section in the text field labeled "Record Type"  
+5. In the section labeled operations check off the boxes for "Read" and "Write"
+5. Scroll down to the section labeled "Requestor"
+5. Click on the "user" dropdown within the "Requestor" section
+5. Select the "Specific Value" option
+    * A text box will appear with greyed out text reading "Please enter a value"
+5. Enter the email of the user whom will be allowed to access the data
     * An example of a valid input would be "example@microshare.io"
     * Note: this new user's email must associated with an account on our platform in order to access the data
 
@@ -152,15 +142,11 @@ You have now made a Rule to govern access to your data!
 2. Click the "Manage" button in the top toolbar
 3. Click the "Robots" button in the left toolbar
 4. Click the "Create" button 
-5. The following page will open: 
-
-[insert screen shot of Robot page]
-
-* Input the Robot name in the top most text field 
-* Type "My First Robot" in the text field labeled "Description"
-* Check off the box labled "Active"
-* Input the same recType from previouly in the "recType" section
-* Copy and paste the code depicted below in the "Script" section
+4. Input the Robot name in the top most text field 
+4. Type "My First Robot" in the text field labeled "Description"
+4. Check off the box labled "Active"
+4. Input the same recType from previouly in the "recType" section
+4. Copy and paste the code depicted below in the "Script" section
 
 [insert sample code with proper webhook for gmail]
 
