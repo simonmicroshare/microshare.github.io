@@ -18,21 +18,13 @@ In this tutorial you're going to program the [SODAQ ExpLoRer board](http://suppo
 
 `Ubuntu Serial Access` run this command in a terminal & `REBOOT` the machine
 
-```shell
-
-sudo usermod -a -G dialout $USER
-
-```
+`sudo usermod -a -G dialout $USER`
 
 `Arch Linux Serial Access` run this command in a terminal & `REBOOT` the machine
 
-```shell
-gpasswd -a $USER uucp
-```
+`gpasswd -a $USER uucp`
 
-```shell 
-gpasswd -a $USER lock
-```
+`gpasswd -a $USER lock`
 
 ## Arduino Desktop IDE
 - Download & Install the [Arduino Desktop IDE](../arduino_ide)
@@ -42,9 +34,7 @@ gpasswd -a $USER lock
 - Click `File` > `Preferences`
 - In the `Additional Boards Manager URLs` field enter this url to set the SODAQ Explorer board's libraries
 
-    ```shell
-    http://downloads.sodaq.net/package_sodaq_samd_index.json
-    ```
+    `http://downloads.sodaq.net/package_sodaq_samd_index.json`
 
 - Click `OK`
 
