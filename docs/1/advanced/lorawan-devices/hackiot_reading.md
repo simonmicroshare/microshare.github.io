@@ -17,15 +17,18 @@ In this tutorial you're going to program the [SODAQ ExpLoRer board](http://suppo
 **This applies to Linux ONLY** `Linux Users` you may need to give your current user read/write access to the serial device file. This usually requires you to add the current user to a system group. These group names vary depending on the Linux distro that you're using. Here are some examples for Ubuntu & Arch Linux.
 
 `Ubuntu Serial Access` run this command in a terminal & `REBOOT` the machine
-```
+
+```shell
 sudo usermod -a -G dialout $USER
 ```
 
 `Arch Linux Serial Access` run this command in a terminal & `REBOOT` the machine
-```
+
+```shell
 gpasswd -a $USER uucp
 ```
-``` 
+
+```shell 
 gpasswd -a $USER lock
 ```
 
@@ -37,9 +40,10 @@ gpasswd -a $USER lock
 - Click `File` > `Preferences`
 - In the `Additional Boards Manager URLs` field enter this url to set the SODAQ Explorer board's libraries
 
-    ```
+    ```shell
     http://downloads.sodaq.net/package_sodaq_samd_index.json
     ```
+
 - Click `OK`
 
 {% include image.html url="/assets/img/ardunino_sodaq_libs_preferences.png" description="Configure the SODAQ Board Libraries" %}
