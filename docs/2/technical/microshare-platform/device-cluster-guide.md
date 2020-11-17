@@ -15,10 +15,9 @@ toc: true
 
 1. [Introduction](./#1-introduction-what-is-a-device-cluster)
 2. [Creating a Device Cluster](./#2-creating-a-device-cluster)
-3. [Creating a Device Cluster by uploading a CSV](./#3-creating-a-device-cluster-by-uploading-a-csv)
-4. [Set the right RecType](./#3-set-the-right-rectype)
-5. [Updating a Device Cluster](./#4-updating-a-device-cluster)
-6. [Reauthorizing a Device Cluster](./#5-reauthorizing-a-device-cluster)
+3. [Set the right RecType](./#3-set-the-right-rectype)
+4. [Updating a Device Cluster](./#4-updating-a-device-cluster)
+5. [Reauthorizing a Device Cluster](./#5-reauthorizing-a-device-cluster)
 
 ---------------------------------------
 
@@ -29,11 +28,11 @@ A device cluster is a group of sensors, most applicable to sensors in the same a
 
 #### What does the Device Cluster process look like?
 
-Data from your sensors is sent via "Lora" signal to your LoRaWAN gateway. The gateways sends the data via WiFi or cellular signal to its corresponding network then to the Microshare network under the source recType name. The device cluster program takes the data from the source recType, and pushes it into the Microshare data lake under the target recType name. From there, the data goes through the decoding function corresponding to the type of your device. After, the program POSTs your data in a digestible format to the Microshare API so that it can be represented on your dashboard or app.  
+Data from your sensors is sent via "Lora" signal to your LoRaWAN gateway. The gateways sends the data via WiFi or cellular signal to its corresponding network then to the Microshare® network under the source recType name. The device cluster program takes the data from the source recType, and pushes it into the Microshare® data lake under the target recType name. From there, the data goes through the decoding function corresponding to the type of your device. After, the program POSTs your data in a digestible format to the Microshare® API so that it can be represented on your dashboard or app.  
 
 ## 2. Creating a Device Cluster
 ---------------------------------------
-A device cluster can be either created by using [The Deploy- M App](/docs/2/installer/deploy-m/download-the-app/), or on the computer by following this tutorial. 
+A device cluster can be created on a computer by following this tutorial. 
 
 Head over to the [dapp.microshare.io](https://dapp.microshare.io/) developer page and login. If you do not already have a login in, [you can create one here](/docs/2/general-user/quick-start/create-an-account/). Navigate over to the Manage tab in top right-hand corner. Then, click the devices tab on the left-hand side.
 
@@ -51,8 +50,8 @@ Click the Create Button with the wrench tool icon. It will take you to the follo
 <br>
 **3.** Make sure your cluster is turned on. Make sure the box indicated with a green arrow is checked.
 
-br>
-**4.** The record types are marked with the blue arrows. The source record type is where the device cluster’s data is coming from. The target record type is the name under which your data from the device clusters will be stored. The naming convention works where the the first part of the rectype details who made the naming convention. So for example, if Comcast owned the record type, their source record type would be com.comcast.environment. The unpacked label for the target rectype details that the data has been decrypted, which is very important for when you call on the rectype to be represented in your dashboard. As of right now, Microshare is the only source of naming the client’s rectypes, but the ability for clients to create their own naming conventions exists. 
+<br>
+**4.** The record types are marked with the blue arrows. The source record type is where the device cluster’s data is coming from. The target record type is the name under which your data from the device clusters will be stored. The naming convention works where the the first part of the rectype details who made the naming convention. So for example, if Comcast owned the record type, their source record type would be com.comcast.environment. The unpacked label for the target rectype details that the data has been decrypted, which is very important for when you call on the rectype to be represented in your dashboard. As of right now, Microshare® is the only source of naming the client’s rectypes, but the ability for clients to create their own naming conventions exists. 
 
 
 ##### <!> Please make sure to follow the [RecType best practices](./#3-set-the-right-rectype) ! <!>
@@ -83,7 +82,7 @@ So as you can understand the structure is as follows:
 **9.** Underlined in teal is your network provider. Click the drop down and select the appropriate network.
 
 
-###### <!> These following steps are not often used just take care of them if you are using Lora OTAA <!>
+###### <!> These following steps are not often used just take care of them if you are using LoRa OTAA <!>
 
 <br>
 **10.**	Underlined in green is a LoRa OTAA checkbox. OTAA stands for Over the Air Authentication. This is a gateway with extra data security. If you plan on using this service for your device cluster, check this box. Only follow the next few steps if you are using LoRa OTAA.
@@ -104,46 +103,10 @@ So as you can understand the structure is as follows:
 
 Once you have created your device cluster, You can now create a dashboard to view your clusters data using the tutorial in the [Dashboard Guide](/docs/2/technical/microshare-platform/dashboard-guide/). You can also learn on how to update your device cluster in the next section. 
 
-You can also learn to create rules and views to manage who can see the data from your device cluster through following the guides in the Microshare platform documentation. 
+You can also learn to create rules and views to manage who can see the data from your device cluster through following the guides in the Microshare® platform documentation. 
 
-## 3. Creating a Device Cluster by Uploading a CSV
----------------------------------------
 
-First read the previous section to understand all the settings you will need to set up to create a DC. Once you understand all the settings you will be able to use the CSV upload to save your time. 
-
-So first download the XLSX table template [here](/assets/xlsx/DC_Upload_Template.xlsx). 
-
-Then open it. 
-
-You should have a table like this one : 
-
-{% include image.html url="\assets\img\upload_dc/upload_dc_0.png" height="900" width="900" description="Upload DC" %}
-
-For the following steps you will only need to fill the "DevEUI" column, and the "location 1","location 2" and "location 3" columns. The column "location 4" is an extra column.
-
-The DEV EUI is a 16 caracters long hexa string, you can keep the dashes or not.
-
-The Location 1 is generally the building.
-The Location 2 is generally the floor.
-The Location 3 is generally the room.
-
-So then fill your table with your devices : 
-
-{% include image.html url="\assets\img\upload_dc/upload_dc_1.png" height="900" width="900" description="Upload DC" %}
-
-##### Once this is done save your file as a **CSV File** using the "**;**" separator.
-
-{% include image.html url="\assets\img\upload_dc/upload_dc_2.png" height="300" width="300" description="Upload DC" %}
-
-Once you have your file simply drag and drop it on the "UPLOAD" button on the Cluster page.
-
-{% include image.html url="\assets\img\upload_dc/upload_dc_3.png" height="900" width="900" description="Upload DC" %}
-
-And your devices are immedialty added to your DC, you just have to complete the settings and your DC is ready !
-
-{% include image.html url="\assets\img\upload_dc/upload_dc_4.png" height="900" width="900" description="Upload DC" %}
-
-## 4. Set the right RecType
+## 3. Set the right RecType
 ---------------------------------------
 
 To make sure you have a working system it is important to follow the instructions for using the correct recType. 
@@ -257,7 +220,7 @@ Here is a list of our product apps along with the domain data they require:
 
 
 
-## 5. Updating a Device Cluster
+## 4. Updating a Device Cluster
 ---------------------------------------
 
 To update your device cluster, simply go to the device cluster page, then click update. You will be able to modify the information of your device cluster and your devices. 
@@ -270,18 +233,18 @@ You can simply upgrade your device cluster and it will work.
 
 If you feel that your changes have not been taken into account, please click on re-authorize on the update page.
 
-## 6. Reauthorizing a Device Cluster
+## 5. Reauthorizing a Device Cluster
 ---------------------------------------
 
-With Microshare you have the possibility to reauthorize a device cluster, you can do the same thing with a robot as well. 
+With Microshare® you have the possibility to reauthorize a device cluster, you can do the same thing with a robot as well. 
 
 What does reauthorize mean?
 
 To understand this it is necessary to understand the principle of [identity](../../microshare-platform-advanced/identity-guide). And ownership linked to share rules. 
 
-The reauthorization will allow to reassociate the ownership of a device cluster. When you click on this button, Microshare will take the account under which you are logged in, as well as the identity you are currently on, and will reauthorize the ownership and identity of the device cluster. 
+The reauthorization will allow to reassociate the ownership of a device cluster. When you click on this button, Microshare® will take the account under which you are logged in, as well as the identity you are currently on, and will reauthorize the ownership and identity of the device cluster. 
 
-This is especially useful when the device cluster has been created under the wrong identity. Because usually we recommend to create it under the Microshare default identity.
+This is especially useful when the device cluster has been created under the wrong identity. Because usually we recommend to create it under the Microshare® default identity.
 
 Be careful, changing the ownership of the data means that it can also impact the sharing of the data, if the share rules do not match anymore.
 
