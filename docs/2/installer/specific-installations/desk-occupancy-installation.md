@@ -22,7 +22,7 @@ Contact [installation@microshare.io](mailto:installation@microshare.io) should y
 - Never force a connector into a port. If the connector and port don&#39;t join with reasonable ease, they probably don&#39;t match. Make sure that the connector matches the port and that you have positioned the connector correctly in relation to the port.
 - Protect Microshare sensors from direct sunlight, wherever possible.
 - Use Microshare solutions in environments according to their specification. Most products arefor indoor use only. 
-- There are no user-serviceable parts inside Microshare sensors. For service personnel: Alwaysunplug external power supply, remove batteries, and turn off UPS battery before service operation. 
+- There are no user-serviceable parts inside Microshare sensors. For service personnel: Always unplug external power supply, remove batteries, and turn off UPS battery before service operation. 
 - Microshare sensors may be damaged by improper storage or handling. Take care not to drop them during transport and installation.
 
 {% include image.html url="/assets/img/installation_tabs/security.png" description="Banner" %}
